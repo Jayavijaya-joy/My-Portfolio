@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7ff4b5ece5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logos_small.png" class="logos">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>DATA ANALYTICS</p>
+                <h1>Hi , I'm <span>Jayavijaya</span><br>From Chilakaluripet</h1>
+            </div>
+        </div>
+
+    </div>
+    <!---------------about----------->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="About-col-1">
+                    <img src="JV.jpg">
+                </div>
+
+                <div class="About-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p><span>I am a passionate and dedicated learner with hands-on experience in AI and Cybersecurity.
+                            Currently pursuing an internship in Cybersecurity at Suprajatechnologies.
+                            Skilled in Python, data analysis, and machine learning projects.
+                            Strong problem-solving abilities with a keen interest in ethical hacking and AI innovation.
+                            Eager to contribute to impactful projects and grow in the tech industry.</span></p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links  active-link" onclick=" opentab('Experience')">Experience</p>
+                        <p class="tab-links  active-link" onclick=" opentab('Education')">Education</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Data analytics</span><br>Powerbi,Tableau,Advance Excel</li>
+                            <li><span>libraries</span><br>numpy,pandas,matplotlib,seaborn</li>
+                            <li><span>Languages</span><br>python,basics of java</li>
+                            <li><span>web design</span><br>HTML,CSS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2025 - current</span><br>Suprajatechnologies - Cybersecurity</li>
+                            <li><span>2025</span><br>Datavalley - Dataanalytics</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2022-2026</span><br>B.Tech CSE -(AI) at Narasaraopet Engineering College</li>
+                            <li><span>2021-2022</span><br>Intermediate at Sri Chaitanya Junior College</li>
+                            <li><span>2020</span><br>SSC at Sri Chaitanya School</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------PROJECTS----------->
+    <div id="Projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="work-1.jpeg">
+                    <div class="layer">
+                        <h3>Cardiovascular Risk Prediction</h3>
+                        <p>Developed a machine learning model using the Random Forest algorithm to predict
+                            cardiovascular disease risk.</p>
+                        <a href="https://github.com/Jayavijaya-joy"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work-2.jpeg">
+                    <div class="layer">
+                        <h3>Bride Belle App</h3>
+                        <p>Developed an Bride Belle Andriod App ,Designed front-end for the Bride Belle App.</p>
+                        <a href="https://github.com/Jayavijaya-joy"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!---------------Contact----------->
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="Contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>Contact</p>
+                    <p><i class="fa-solid fa-phone"></i>9030968261</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/i_am_vijaya_11/?next=%2F"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/jaya-vijaya-a6449931b/"><i
+                                class="fa-brands fa-linkedin"></i></a>
+
+                    </div>
+                    <a href="SARILLA JAYAVIJAYA .pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="Contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Vijaya. Built by Jayavijaya</p>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+
+        }
+    </script>
+</body>
+
+</html>
